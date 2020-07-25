@@ -13,3 +13,5 @@ const controller=function(req,res){
      res.redirect("/");
 }
 module.exports=controller;
+
+

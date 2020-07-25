@@ -56,9 +56,31 @@ li{
 li div{
   
     width: 30%;
-    display: inline;
+    display: inline-block;
+    font-weight: bolder;
+    font-size: large;
 
 }
 
 
+.item{
+    text-align: center;
+     color: white;
+padding-left: 2px;
+padding-right: 2px;
 
+     
+}
+
+.fa-check{
+    color: greenyellow;
+}
+
+.fa-times{
+    color: red;
+}
+
+
+i{
+    cursor: pointer;
+}

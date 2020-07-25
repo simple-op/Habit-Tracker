@@ -23,10 +23,15 @@
     </form>
     
     <ul> 
-    <li> <i class="fa fa-list" aria-hidden="true"></i>  <span style="float: right;"><%for(let i=0;i<7;i++ ) {%>
+    <li> <i class="fa fa-list" aria-hidden="true"></i>  <span style="float: right;"><%for(let i=0,j=0;i<7;i++ ) {%>
 
-              
-                    <span >  &nbsp;&nbsp; <%=daysOfWeek[date.getDay()-i]%> </span>  
+                    <%let day=date.getDay()-i %>
+                     
+                    <% if(day<0){%>
+                        <% day=daysOfWeek.length-1-j %>
+                                <% j++ %>
+                    <%}%>   
+                    <span class="item">  &nbsp;&nbsp; <%=daysOfWeek[day]%> </span>  
                     
         
          
@@ -42,7 +47,24 @@
                 <span style="float: right;"><%for(let j=0;j<7;j++ ) {%>
 
               
-                    <span >  &nbsp;&nbsp; <%=habits[i].status[j]%> </span>  
+                    <span class="item" >   <%if(habits[i].status[j]==null){%>
+
+                        &nbsp;&nbsp; &nbsp;&nbsp; <i class="fa fa-ban" id="none" onclick="togglr()" aria-hidden="true"> </i>  
+                        
+                    <%}%> 
+                    <%  if(habits[i].status[j]=='done'){%>
+
+                        &nbsp;&nbsp; &nbsp;&nbsp; <i class="fa fa-check" aria-hidden="true"></i> 
+                        
+                    <%}%> 
+                    <%  if(habits[i].status[j]=='notDone'){%>
+
+                        &nbsp;&nbsp; &nbsp;&nbsp; <i class="fa fa-times" aria-hidden="true"></i>
+                        
+                    <%}%> 
+                
+                
+                </span>  
                     
         
          
@@ -50,7 +72,9 @@
             </li> 
             <%}%>
     </ul>
-    <script src="https://use.fontawesome.com/549dd1e837.js"></script>    
+    <script src="https://use.fontawesome.com/549dd1e837.js"></script>  
+    <script src="script.js"></script>  
+    
 </body>
 
 </html>
