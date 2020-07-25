@@ -8,6 +8,13 @@ const schema=new mongoose.Schema({
 
     } ,
 
+    status:{
+        type:Array,
+         
+
+    },
+
+    
 
 
 

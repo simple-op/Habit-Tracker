@@ -1,6 +1,7 @@
 const express=require("express")
-const controller=require("../controllers/controller1")
-const controller2=require("../controllers/controller2")
+const controller=require("../controllers/Home")
+const controller2=require("../controllers/create");
+const { Router } = require("express");
 
 
 
@@ -8,7 +9,7 @@ const router=express.Router();
 
 
 router.get("/",controller)
-router.get("/abc",controller2)
+router.post("/create",controller2)
 
 
 module.exports=router;

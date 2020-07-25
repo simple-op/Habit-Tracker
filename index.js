@@ -1,18 +1,20 @@
 const express=require("express");
 const router=require("./routes");
 const mongoose=require("./config/mongoose");
-
-
-
-
-
-
+const path=require("path");
+const ejs=require("ejs");
 const app=express();
-app.use(express.urlencoded());
 const port=8000;
-app.use(express.static("assets"));
 
+app.set('view engine','ejs');
+app.set('views','./views');
+
+
+// middlewares
+app.use(express.urlencoded());
+app.use(express.static("assets"));
 app.use("/",router);
+
 
 
 
