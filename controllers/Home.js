@@ -9,7 +9,7 @@ const controller=function(req,res){
    let date=new Date();
 
    habitsCollection.find({},function(err,habitRow){
-        
+         
    res.render("home",{
          title:"Habit-tracker", 
          habits:habitRow,

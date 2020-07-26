@@ -17,7 +17,7 @@
             <%=date.getDate()%> 
             <%=monthNames[date.getMonth()]%></span></div>   
     
-    <form action="/create" method="post">
+    <form action="/create" id="addHabit" method="post">
     <input  name="newHabit" type="text" required="true" placeholder="Enter here.....">
     <button type="submit"><i  class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
     </form>
@@ -31,35 +31,43 @@
                         <% day=daysOfWeek.length-1-j %>
                                 <% j++ %>
                     <%}%>   
-                    <span class="item">  &nbsp;&nbsp; <%=daysOfWeek[day]%> </span>  
+                    <span class="item">  &nbsp;&nbsp;<%if(i==0) {%>
+                        Today
+                        <%}%> 
+                        <%if(i!=0) {%>
+                            <%=daysOfWeek[day]%>
+                        <%}%>
+                        </span>  
                     
         
          
         <%}%></span> </li>
+<form action="/save" method="post" id="addChanges">
         
         <%for(let i=0;i<habits.length;i++ ) {%>
 
               
-            <li>
+            <li> <a style="text-decoration: none; color: red;" href="/delete/?id=<%=habits[i].id%>"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
                 <div><%=habits[i].habit%> 
+                <input style="display: none;" name="id" type="text" value="<%=habits[i]._id%>">
                      
                 </div>
                 <span style="float: right;"><%for(let j=0;j<7;j++ ) {%>
 
-              
-                    <span class="item" >   <%if(habits[i].status[j]==null){%>
-
-                        &nbsp;&nbsp; &nbsp;&nbsp; <i class="fa fa-ban" id="none" onclick="togglr()" aria-hidden="true"> </i>  
+                   
+                    <span class="item" >   <%if(habits[i].status[j]==""){%>
+                        
+                        &nbsp;&nbsp; &nbsp;&nbsp; <i class="fa fa-ban" id="none"  aria-hidden="true"> <input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>  
                         
                     <%}%> 
                     <%  if(habits[i].status[j]=='done'){%>
 
-                        &nbsp;&nbsp; &nbsp;&nbsp; <i class="fa fa-check" aria-hidden="true"></i> 
+                        &nbsp;&nbsp; &nbsp;&nbsp; <i class="fa fa-check" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i> 
                         
                     <%}%> 
                     <%  if(habits[i].status[j]=='notDone'){%>
 
-                        &nbsp;&nbsp; &nbsp;&nbsp; <i class="fa fa-times" aria-hidden="true"></i>
+                        &nbsp;&nbsp; &nbsp;&nbsp; <i name="dfdsf" class="fa fa-times" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>
                         
                     <%}%> 
                 
@@ -70,11 +78,17 @@
          
         <%}%></span>
             </li> 
+
             <%}%>
+            <button type="submit">Submit</button>
+        </form>
+          
     </ul>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="notify.js"></script>
     <script src="https://use.fontawesome.com/549dd1e837.js"></script>  
     <script src="script.js"></script>  
-    
+   
 </body>
 
 </html>

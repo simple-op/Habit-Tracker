@@ -5,12 +5,29 @@ body{
 }
 
 
-form{
+#addHabit{
     display: flex;
     justify-content: baseline;
 
 
 }
+
+#addChanges {
+ width: 100%;
+
+}
+
+#addChanges button{
+  width: 100%;
+background-color: greenyellow;
+/* color: aliceblue; */
+font-weight: bold;
+font-size: large;
+padding: 4px;
+border: 0;
+cursor: pointer;
+}
+
 
 h1{
     text-align: center;
@@ -19,7 +36,7 @@ h1{
     margin: 0;
 }
 
-button{
+#addHabit button{
     
    height: 40px;  
    margin-left: auto;
