@@ -8,6 +8,8 @@ const mongoose=require("./config/mongoose");
 const ejs=require("ejs");
 //calling express()
 const app=express();
+
+
 //on port
 const port=8000;
 // setting view

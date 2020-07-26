@@ -9,14 +9,14 @@ const controller=function(req,res){
 //     loop for itirating over the req.body object to get posted value
     for(let i in req.body){
            if(habits.length==1){
-            console.log(habits.length)
+            
             if(req.body[i]!=req.body.id){
                      console.log(habits.length)
                      // if there is single habit user has
                      // updating values with new statuses
                      habitsCollection.updateMany({_id:req.body.id},{status:req.body[i]},function(){
                      })
-            break;}
+            }
                 }
          
    
@@ -32,8 +32,8 @@ const controller=function(req,res){
        }
        }
        // after changes redirects to home
-        res.redirect("/");
        })
+       res.redirect("/");
    
        }
        // exporting controller changes
