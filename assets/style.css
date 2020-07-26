@@ -77,14 +77,18 @@ ul {
     padding-inline-start: 0;
 }
 
-li{
+li {
     
-    background-color: black;
+    background-color:black;
     color: white;
     padding: 5px;
     margin-top: 2px;
 
 
+}
+
+ li:nth-child(2n){
+background-color:gray;
 }
 
 li div{
