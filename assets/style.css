@@ -1,10 +1,13 @@
+
+/* setting fonts and width of entire web app */
 body{
     font-family: sans-serif;
     width: 50%;
+    /* margin to keep in center  */
     margin: auto;
 }
 
-
+/* addHabit form d */
 #addHabit{
     display: flex;
     justify-content: baseline;
@@ -17,6 +20,7 @@ body{
 
 }
 
+/* button for saving changes */
 #addChanges button{
   width: 100%;
 background-color: greenyellow;
@@ -26,12 +30,13 @@ font-size: large;
 padding: 10px;
 border: 0;
 cursor: pointer;
+/* added outer shadow to the button */
 box-shadow: 0 0 4px 2px black;
 }
 
 
 
-
+/* header  */
 h1{
     text-align: center;
     background-image: linear-gradient(greenyellow,white);
@@ -39,6 +44,7 @@ h1{
     margin: 0;
 }
 
+/* label for text field */
 #newHabitLabel{
 
     font-weight: bold; 
@@ -50,6 +56,7 @@ h1{
 }
 
 
+/* button to add ne habit */
 
 #addHabit button{
     
@@ -59,10 +66,12 @@ h1{
    border: 0;
    background-color: greenyellow;
    cursor: pointer;
+   /* added outer  shadow to the button  */
    box-shadow: 0 0 4px 2px black;
 
 
  }
+ /* input text field  */
 input{
     width: 100%;
     height: 40px;
@@ -73,10 +82,12 @@ input{
     font-size:large ;
     border: none;
     outline: none;
+    /* added inner shadow to look good */
    box-shadow: inset 0 0 10px 2px gray;
 }
 
 ul {
+    /* margin auto */
     margin: auto;
     list-style: none;
     padding-inline-start: 0;
@@ -85,13 +96,14 @@ ul {
 li {
     
     background-color:black;
+    /* text color set to white */
     color: white;
     padding: 5px;
     margin-top: 2px;
 
 
 }
-
+/* to set alternate color to gray  */
  li:nth-child(2n){
 background-color:gray;
 }
@@ -99,6 +111,7 @@ background-color:gray;
 li div{
   
     width: 30%;
+    /* div set to inline block to keep in li tag */
     display: inline-block;
     font-weight: bolder;
     font-size: large;
@@ -109,17 +122,19 @@ li div{
 .item{
     text-align: center;
      color: white;
-padding-left: 2px;
-padding-right: 2px;
+     padding-left: 2px;
+     padding-right: 2px;
 
      
 }
 
 .fa-check{
+    /* completed habit icon color */
     color: greenyellow;
 }
 
 .fa-times{
+    /* not completed habit icon color */
     color: red;
 }
 
