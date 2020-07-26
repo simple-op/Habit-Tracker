@@ -1,5 +1,9 @@
 
-
+if(document.getElementsByTagName("li").length<=1)
+     {
+        $.notify("Add Some Habits","success");
+    
+     }
 
 
 
@@ -15,7 +19,7 @@ document.addEventListener("click",function(e){
 
     }
    else if(e.target.className=="fa fa-check"){
-    $.notify("Done!",{ autoHideDelay: 500});
+    $.notify("Not Done!",{ autoHideDelay: 500});
 
     e.target.className="fa fa-times";
     let value= e.target.children[0].value="notDone";
@@ -23,7 +27,7 @@ document.addEventListener("click",function(e){
 
    }
    else if(e.target.className=="fa fa-times"){
-    $.notify("Done!",{ autoHideDelay: 500});
+    $.notify("No Action",{ autoHideDelay: 500});
 
     e.target.className="fa fa-ban";
    let value= e.target.children[0].value="";

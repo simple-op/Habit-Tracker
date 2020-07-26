@@ -1,5 +1,5 @@
 body{
-
+    font-family: sans-serif;
     width: 50%;
     margin: auto;
 }
@@ -29,16 +29,29 @@ cursor: pointer;
 }
 
 
+
+
 h1{
     text-align: center;
-    background-color: bisque;
+    background-image: linear-gradient(greenyellow,white);
     padding: 20px;
     margin: 0;
 }
 
+#newHabitLabel{
+
+    font-weight: bold; 
+    font-size: large; 
+    background-color:; 
+    color: white; 
+    margin-bottom: 5px;
+}
+
+
+
 #addHabit button{
     
-   height: 40px;  
+   height: 42px;  
    margin-left: auto;
    width: 50px;
    border: 0;
@@ -49,9 +62,13 @@ h1{
 input{
     width: 100%;
     height: 40px;
-    background-color: lightgray;
+    background-color:yellowgreen;
     border: 0;
+    color: white;
     font-weight: bold;
+    font-size:large ;
+    border: none;
+    outline: none;
 }
 
 ul {

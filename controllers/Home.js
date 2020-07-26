@@ -3,9 +3,7 @@ const habitsCollection=require("../models/habits");
 
 const controller=function(req,res){
    let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-   let monthNames = [
-      "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-    ];
+   let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
    let date=new Date();
 
    habitsCollection.find({},function(err,habitRow){
@@ -16,12 +14,6 @@ const controller=function(req,res){
          daysOfWeek:daysOfWeek,
          monthNames:monthNames,
          date:date,
-         
- 
-      });
-     });
-    
-      
-
+         });});
 }
 module.exports=controller;
