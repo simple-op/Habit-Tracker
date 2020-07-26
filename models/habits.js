@@ -1,6 +1,7 @@
+// importing mongoose
 const mongoose=require("mongoose");
 
-
+// creating new  schema for habits
 const schema=new mongoose.Schema({
     habit:{
         type:String,
@@ -12,7 +13,7 @@ const schema=new mongoose.Schema({
            }
         });
 
-
+// creating new model
 const habit=mongoose.model("habits",schema);
 
 module.exports=habit;

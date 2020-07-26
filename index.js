@@ -1,11 +1,16 @@
+// require express
 const express=require("express");
+// importing router from routes
 const router=require("./routes");
+//importing mongoose from config
 const mongoose=require("./config/mongoose");
-const path=require("path");
+// import view engine
 const ejs=require("ejs");
+//calling express()
 const app=express();
+//on port
 const port=8000;
-
+// setting view
 app.set('view engine','ejs');
 app.set('views','./views');
 
@@ -19,7 +24,7 @@ app.use("/",router);
 
 
 
-
+//firing up the server
 app.listen(port,function(err){
     if(err){
         console.log(err);
