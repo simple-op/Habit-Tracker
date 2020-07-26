@@ -23,9 +23,10 @@ background-color: greenyellow;
 /* color: aliceblue; */
 font-weight: bold;
 font-size: large;
-padding: 4px;
+padding: 10px;
 border: 0;
 cursor: pointer;
+box-shadow: 0 0 4px 2px black;
 }
 
 
@@ -42,9 +43,10 @@ h1{
 
     font-weight: bold; 
     font-size: large; 
-    background-color:; 
+    background-color:dodgerblue; 
     color: white; 
     margin-bottom: 5px;
+    padding: 5px;
 }
 
 
@@ -57,6 +59,8 @@ h1{
    border: 0;
    background-color: greenyellow;
    cursor: pointer;
+   box-shadow: 0 0 4px 2px black;
+
 
  }
 input{
@@ -69,6 +73,7 @@ input{
     font-size:large ;
     border: none;
     outline: none;
+   box-shadow: inset 0 0 10px 2px gray;
 }
 
 ul {
