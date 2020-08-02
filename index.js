@@ -8,10 +8,15 @@ const mongoose=require("./config/mongoose");
 const ejs=require("ejs");
 //calling express()
 const app=express();
+<<<<<<< HEAD
 
 
 //on port
 const port=process.env.PORT||8000;
+=======
+//on port
+const port=8000;
+>>>>>>> 63ee7d03b0985ce683af49f20f5ca6bc534fff47
 // setting view
 app.set('view engine','ejs');
 app.set('views','./views');
