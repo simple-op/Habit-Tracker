@@ -32,12 +32,11 @@ const controller=function(req,res){
        }
        }
        // after changes redirects to home
-<<<<<<< HEAD
-=======
-        res.redirect("/");
->>>>>>> 63ee7d03b0985ce683af49f20f5ca6bc534fff47
+
+      return  res.redirect("/");
+
        })
-       res.redirect("/");
+      
    
        }
        // exporting controller changes
