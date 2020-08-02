@@ -9,7 +9,7 @@ const controller=function(req,res){
     let status=new Array(7);
     // assigning "" value to each item
      for(let i=0 ;i<7 ;i++){
-       status[i]="";
+       status[i]=" ";
      }
     //  create function for creating a new document in mongo db
     habitsCollection.create({

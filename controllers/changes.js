@@ -14,7 +14,7 @@ const controller=function(req,res){
                      console.log(habits.length)
                      // if there is single habit user has
                      // updating values with new statuses
-                     habitsCollection.updateMany({_id:req.body.id},{status:req.body[i]},function(){
+                     habitsCollection.update({_id:req.body.id},{status:req.body[i]},function(){
                      })
             }
                 }
@@ -24,7 +24,7 @@ const controller=function(req,res){
               //    if there are  multiple habits user has
                 if(req.body[i]!=req.body.id){
            
-                habitsCollection.updateMany({_id:req.body.id[j]},{status:req.body[i]},function(){
+                habitsCollection.update({_id:req.body.id[j]},{status:req.body[i]},function(){
      
                })
                j++; 

@@ -54,22 +54,22 @@
                      
                 </div>
                 <span style="float: right;"><%for(let j=0;j<7;j++ ) {%>
-                <span class="item" >   <%if(habits[i].status[j]==""){%>
+                <span class="item" >   <%if(habits[i].status[j]==" "){%>
                 &nbsp;&nbsp; &nbsp;&nbsp; 
-                <i class="fa fa-ban" id="none"  aria-hidden="true"> 
-                <input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>  
+                <i class="fa fa-ban" onclick="change(this)" id="none"  aria-hidden="true"> 
+                <input value="<%=habits[i].status[j]%>"  name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>  
                         
                     <%}%> 
                 <%  if(habits[i].status[j]=='done'){%>
 
                 &nbsp;&nbsp; &nbsp;&nbsp; 
-                <i class="fa fa-check" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i> 
+                <i class="fa fa-check" onclick="change(this)" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i> 
                         
                     <%}%> 
                 <%  if(habits[i].status[j]=='notDone'){%>
 
                 &nbsp;&nbsp; &nbsp;&nbsp; 
-                <i name="dfdsf" class="fa fa-times" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>
+                <i name="dfdsf" class="fa fa-times" onclick="change(this)" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>
                         
                 <%}%> 
                 
