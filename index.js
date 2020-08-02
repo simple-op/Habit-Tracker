@@ -11,7 +11,7 @@ const app=express();
 
 
 //on port
-const port=8000;
+const port=process.env.PORT||8000;
 // setting view
 app.set('view engine','ejs');
 app.set('views','./views');
