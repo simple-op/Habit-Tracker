@@ -2,7 +2,7 @@
 /* setting fonts and width of entire web app */
 body{
     font-family: sans-serif;
-    width: 50%;
+    width: 70%;
     /* margin to keep in center  */
     margin: auto;
 }
@@ -145,11 +145,20 @@ i{
 
 
 @media screen and (max-width:780px) {
-   
+    li div{
+  
+        width: 30%;
+        /* div set to inline block to keep in li tag */
+        display: inline-block;
+        font-weight: bolder;
+        font-size: small;
+    
+    }
+
     body{
         width: 98vw;
         margin: 0px;
-        
+        font-size: small;
     }
     body{
         padding: 0;
