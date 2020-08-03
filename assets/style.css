@@ -151,14 +151,14 @@ i{
         /* div set to inline block to keep in li tag */
         display: inline-block;
         font-weight: bolder;
-        font-size: small;
+        font-size: xx-small;
     
     }
 
     body{
         width: 98vw;
         margin: 0px;
-        font-size: small;
+        font-size: xx-small;
     }
     body{
         padding: 0;
