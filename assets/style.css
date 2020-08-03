@@ -142,3 +142,16 @@ li div{
 i{
     cursor: pointer;
 }
+
+
+@media screen and (max-width:780px) {
+   
+    body{
+        width: 98vw;
+        margin: 0px;
+        
+    }
+    body{
+        padding: 0;
+    }
+  }
